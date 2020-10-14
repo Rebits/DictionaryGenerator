@@ -11,17 +11,14 @@ translator = Translator()
 for word in  word_list:
     translation = translator.translate(
     word, src="es", dest="pt").text
-
-print(translation)
+    print(translation)
 
 for word in  word_list:
     translation = translator.translate(
     word, src="es", dest="fr").text
-
-print(translation)
+    print(translation)
 
 for word in  word_list:
     translation = translator.translate(
     word, src="es", dest="en").text
-
-print(translation)
+    print(translation)
