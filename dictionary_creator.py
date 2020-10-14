@@ -13,3 +13,9 @@ for word in  word_list:
     word, src="es", dest="pt").text
 
 print(translation)
+
+for word in  word_list:
+    translation = translator.translate(
+    word, src="es", dest="fr").text
+
+print(translation)
