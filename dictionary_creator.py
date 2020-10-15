@@ -14,11 +14,11 @@ file = open(text, "r")
 temp = file.read().splitlines()
 for line in temp:
     for origin in origin_languages:
-        translated_file.writelines(line + "/ " )
+        translated_file.writelines(line + "/" )
         for destination in destination_languages:
             translation = translator.translate(
                 line, src=origin, dest=destination).text
-            translated_file.writelines(translation + "/ ")
+            translated_file.writelines(translation + "/")
         translated_file.writelines("\n")
 
 file.close()
