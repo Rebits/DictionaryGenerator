@@ -6,24 +6,22 @@ import sys,os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-origin_languages = ["es"]
-destination_languages = ["pt","fr","en"]
-
-
-if len(sys.argv) < 3:
-    print("Input file, Output file or Audio folder are not selected")
+if len(sys.argv) < 5:
+    print("Input file, Output file, Audio folder, origin language and destination languages musto be set")
     exit(-1)
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 dest_audio = sys.argv[3]
+origin_languages = sys.argv[4]
+destination_languages = sys.argv[5]
 
 if os.path.isfile(f"{output_file}"):
     print("Selected output file already exits")
     exit(-1)
 
 if not os.path.isfile(f"{input_file}"):
-    print("Selected input file is not redeable or does not exits")
+    print("Selected input file is not redeable or does not exit")
     exit(-1)
 
 if os.path.isdir(f"{dest_audio}"):
